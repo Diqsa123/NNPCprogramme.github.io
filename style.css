@@ -1,0 +1,87 @@
+/* Reset default margin and padding for all elements */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Apply a background color to the body */
+body {
+   background-color: #f1f1f1;
+   font-family: sans-serif;
+}
+
+/* Style the anchor links */
+a {
+   text-decoration: none;
+   color: white;
+   font-size: 20px;
+}
+
+/* Apply styles to fieldset */
+fieldset {
+   width: 250px;
+   margin-left: 30px;
+   padding: 20px;
+   background-color: white;
+   border: none;
+}
+
+/* Style the input elements */
+input {
+   width: 200px;
+   height: 35px;
+   border: none;
+   padding: 15px;
+   margin-top: 20px;
+   background: #f1f1f1;
+}
+
+/* Style the labels */
+label {
+   color: #0b85af;
+}
+
+/* Style the submit button */
+#submitButton,
+#shareButton {
+   text-decoration: none;
+   color: white;
+   padding: 10px 20px;
+   background-color: #0072f6;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   margin: 10px;
+   display: inline-block;
+   text-align: center;
+   transition: background-color 0.3s ease;
+}
+
+#submitButton:hover,
+#shareButton:hover {
+   background-color: #004ba0;
+}
+
+/* Additional styles to make radio buttons smaller */
+#radio input[type="radio"] {
+   transform: scale(0.8);
+   /* Adjust the scale value to your preference */
+}
+
+/* Remove border from images */
+img {
+   border: none;
+}
+
+/* Style the "remaining steps" section */
+#remain {
+   margin-left: 12px;
+   color: white;
+   border: 5px double white;
+   padding: 7px;
+   background-color: blue;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-bottom: 59px;
+}
